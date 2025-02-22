@@ -35,7 +35,7 @@ num_steps = steps["observation__exterior_image_1_left"].shape[0]
 # Run inference on an example.
 example = {
     "observation/exterior_image_1_left": steps["observation__exterior_image_1_left"][step_idx],
-    # "observation/exterior_image_2_left": steps["observation__exterior_image_2_left"][step_idx],
+    # "observation/exterior_image_2_left": ## this is not used within policies/droid_policy.py > DroidInputs()
     "observation/wrist_image_left": steps["observation__wrist_image_left"][step_idx],
     "observation/joint_position": steps["observation__joint_position"][step_idx],
     "observation/gripper_position": steps["observation__gripper_position"][step_idx],
@@ -44,10 +44,12 @@ example = {
 ## uncomment below to see an approved example
 # example = droid_policy.make_droid_example()
 
-# get output embedding only
-embedding = policy.embed_only(example)
-print(f'{embedding=}\n')
-
 # get output action_chunk
 action_chunk = policy.infer(example)["actions"]
-print(f'{action_chunk=}\n')
+print(f'{action_chunk.shape=}\n') # (10, 8)
+
+# get output embedding only
+embeddings_outputs_transform = droid_policy.DroidEmbeddingsOutputs()
+embeddings = embeddings_outputs_transform(policy.embed_only(example))
+print(f'embeddings keys, shapes, types, dtypes {[(k, v.shape, type(v), v.dtype) for k, v in embeddings.items()]}')
+# embeddings keys, shapes, types, dtypes [('observation/exterior_image_1_left', (2048,), <class 'numpy.ndarray'>, dtype(bfloat16)), ('observation/wrist_image_left', (2048,), <class 'numpy.ndarray'>, dtype(bfloat16))]

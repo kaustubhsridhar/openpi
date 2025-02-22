@@ -77,3 +77,23 @@ class DroidOutputs(transforms.DataTransformFn):
     def __call__(self, data: dict) -> dict:
         # Only return the first 8 dims.
         return {"actions": np.asarray(data["actions"][:, :8])}
+    
+@dataclasses.dataclass(frozen=True)
+class DroidEmbeddingsOutputs(transforms.DataTransformFn):
+    # Determines which model will be used.
+
+    def __call__(self, data: dict) -> dict:
+        # change the keys of the data # see DroidInputs() for the reverse of the below
+        # if the new key is zeros, no need to send it
+        # also average the embeddings along the first dimension
+        names_to_output_names = {
+            # for pi0
+            "base_0_rgb": "observation/exterior_image_1_left",
+            "left_wrist_0_rgb": "observation/wrist_image_left",
+            "right_wrist_0_rgb": "zeros",
+            # for pi0_fast
+            # "base_0_rgb": "observation/exterior_image_1_left", # already in pi0
+            "base_1_rgb": "zeros",
+            "wrist_0_rgb": "observation/wrist_image_left",
+        }
+        return {names_to_output_names[k]: v.mean(axis=0) for k, v in data.items() if names_to_output_names[k] != "zeros"}

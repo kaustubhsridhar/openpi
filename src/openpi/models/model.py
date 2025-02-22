@@ -269,6 +269,9 @@ class BaseModel(nnx.Module, abc.ABC):
     @abc.abstractmethod
     def sample_actions(self, rng: at.KeyArrayLike, observation: Observation) -> Actions: ...
 
+    @abc.abstractmethod
+    def embed_only(self, observation: Observation): ...
+
 
 def restore_params(
     params_path: pathlib.Path | str,

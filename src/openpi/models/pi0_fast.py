@@ -300,3 +300,20 @@ class Pi0FAST(_model.BaseModel):
         # Use lax.while_loop so we can jit the full decoding loop.
         _, output_tokens, _, _, _ = jax.lax.while_loop(cond, step, (last_logit, output_tokens, kv_cache, False, 0))
         return output_tokens
+    
+    @override
+    def embed_only(
+        self,
+        observation: _model.Observation,
+    ):
+        # TODO: this is a hack to get the image keys.
+        observation = _model.preprocess_observation(
+            None, observation, train=False, image_keys=list(observation.images.keys())
+        )
+
+        # embed images
+        embeddings = {}
+        for name in observation.images:
+            image_token_embeddings, _ = self.PaliGemma.img(observation.images[name], train=False)
+            embeddings[name] = image_token_embeddings
+        return embeddings

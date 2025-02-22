@@ -31,6 +31,7 @@ class Policy(BasePolicy):
         metadata: dict[str, Any] | None = None,
     ):
         self._sample_actions = nnx_utils.module_jit(model.sample_actions)
+        self._embed_only = nnx_utils.module_jit(model.embed_only)
         self._input_transform = _transforms.compose(transforms)
         self._output_transform = _transforms.compose(output_transforms)
         self._rng = rng or jax.random.key(0)
@@ -50,10 +51,36 @@ class Policy(BasePolicy):
             "state": inputs["state"],
             "actions": self._sample_actions(sample_rng, _model.Observation.from_dict(inputs), **self._sample_kwargs),
         }
+        # TODO: del at cleanup
+        # print(f'infer 1 {[(k, v.shape, v.dtype, type(v)) for k, v in outputs.items()]}')
+        # infer 1 [('state', (1, 8), dtype('float32'), <class 'jaxlib.xla_extension.ArrayImpl'>), ('actions', (1, 256), dtype('float32'), <class 'jaxlib.xla_extension.ArrayImpl'>)]
 
         # Unbatch and convert to np.ndarray.
         outputs = jax.tree.map(lambda x: np.asarray(x[0, ...]), outputs)
+        # TODO: del at cleanup
+        # print(f'infer 2 {[(k, v.shape, v.dtype, type(v)) for k, v in outputs.items()]}')
+        # infer 2 [('actions', (256,), dtype('float32'), <class 'numpy.ndarray'>), ('state', (8,), dtype('float32'), <class 'numpy.ndarray'>)]
         return self._output_transform(outputs)
+    
+    @override
+    def embed_only(self, obs: dict) -> dict:
+        # Make a copy since transformations may modify the inputs in place.
+        inputs = jax.tree.map(lambda x: x, obs)
+        inputs = self._input_transform(inputs)
+        # Make a batch and convert to jax.Array.
+        inputs = jax.tree.map(lambda x: jnp.asarray(x)[np.newaxis, ...], inputs)
+
+        outputs = self._embed_only(_model.Observation.from_dict(inputs))
+        # TODO: del at cleanup
+        # print(f'embed 1 {[(k, v.shape, v.dtype, type(v)) for k, v in outputs.items()]}')
+        # embed 1 [('base_0_rgb', (1, 256, 2048), dtype(bfloat16), <class 'jaxlib.xla_extension.ArrayImpl'>), ('base_1_rgb', (1, 256, 2048), dtype(bfloat16), <class 'jaxlib.xla_extension.ArrayImpl'>), ('wrist_0_rgb', (1, 256, 2048), dtype(bfloat16), <class 'jaxlib.xla_extension.ArrayImpl'>)]
+
+        # Unbatch and convert to np.ndarray.
+        outputs = jax.tree.map(lambda x: np.asarray(x[0, ...]), outputs)
+        # TODO: del at cleanup
+        # print(f'embed 2 {[(k, v.shape, v.dtype, type(v)) for k, v in outputs.items()]}')
+        # embed 2 [('base_0_rgb', (256, 2048), dtype(bfloat16), <class 'numpy.ndarray'>), ('base_1_rgb', (256, 2048), dtype(bfloat16), <class 'numpy.ndarray'>), ('wrist_0_rgb', (256, 2048), dtype(bfloat16), <class 'numpy.ndarray'>)]
+        return outputs
 
     @property
     def metadata(self) -> dict[str, Any]:
