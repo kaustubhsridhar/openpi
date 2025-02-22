@@ -1,0 +1,132 @@
+2025-02-17 01:19:24.992198: I tensorflow/core/util/port.cc:153] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2025-02-17 01:19:25.014386: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:477] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1739773165.040793 3944490 cuda_dnn.cc:8310] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1739773165.049345 3944490 cuda_blas.cc:1418] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2025-02-17 01:19:25.076540: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX512F AVX512_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+I0000 00:00:1739773168.011104 3944490 gpu_device.cc:2022] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 66210 MB memory:  -> device: 0, name: NVIDIA A100 80GB PCIe, pci bus id: 0000:4f:00.0, compute capability: 8.0
+
+total: 95658
+
+2025-02-17 01:19:28.285071: I tensorflow/core/kernels/data/tf_record_dataset_op.cc:376] The default buffer size is 262144, which is overridden by the user specified `buffer_size` of 8388608
+time: 2025-02-17 01:19:29, analyzing 0 / 95658
+time: 2025-02-17 01:21:12, analyzing 956 / 95658
+time: 2025-02-17 01:22:31, analyzing 1912 / 95658
+time: 2025-02-17 01:23:58, analyzing 2868 / 95658
+time: 2025-02-17 01:25:18, analyzing 3824 / 95658
+time: 2025-02-17 01:26:41, analyzing 4780 / 95658
+time: 2025-02-17 01:28:05, analyzing 5736 / 95658
+time: 2025-02-17 01:29:27, analyzing 6692 / 95658
+time: 2025-02-17 01:30:48, analyzing 7648 / 95658
+time: 2025-02-17 01:32:09, analyzing 8604 / 95658
+time: 2025-02-17 01:33:32, analyzing 9560 / 95658
+time: 2025-02-17 01:34:57, analyzing 10516 / 95658
+time: 2025-02-17 01:36:18, analyzing 11472 / 95658
+time: 2025-02-17 01:37:41, analyzing 12428 / 95658
+time: 2025-02-17 01:39:04, analyzing 13384 / 95658
+time: 2025-02-17 01:40:27, analyzing 14340 / 95658
+time: 2025-02-17 01:41:55, analyzing 15296 / 95658
+time: 2025-02-17 01:43:19, analyzing 16252 / 95658
+time: 2025-02-17 01:44:41, analyzing 17208 / 95658
+time: 2025-02-17 01:45:58, analyzing 18164 / 95658
+time: 2025-02-17 01:47:17, analyzing 19120 / 95658
+time: 2025-02-17 01:48:34, analyzing 20076 / 95658
+time: 2025-02-17 01:49:54, analyzing 21032 / 95658
+time: 2025-02-17 01:51:11, analyzing 21988 / 95658
+time: 2025-02-17 01:52:29, analyzing 22944 / 95658
+time: 2025-02-17 01:53:53, analyzing 23900 / 95658
+time: 2025-02-17 01:55:18, analyzing 24856 / 95658
+time: 2025-02-17 01:56:40, analyzing 25812 / 95658
+time: 2025-02-17 01:58:07, analyzing 26768 / 95658
+time: 2025-02-17 01:59:30, analyzing 27724 / 95658
+time: 2025-02-17 02:00:48, analyzing 28680 / 95658
+time: 2025-02-17 02:02:07, analyzing 29636 / 95658
+time: 2025-02-17 02:03:27, analyzing 30592 / 95658
+time: 2025-02-17 02:04:49, analyzing 31548 / 95658
+time: 2025-02-17 02:06:13, analyzing 32504 / 95658
+time: 2025-02-17 02:07:36, analyzing 33460 / 95658
+time: 2025-02-17 02:08:55, analyzing 34416 / 95658
+time: 2025-02-17 02:10:19, analyzing 35372 / 95658
+time: 2025-02-17 02:11:39, analyzing 36328 / 95658
+time: 2025-02-17 02:13:02, analyzing 37284 / 95658
+time: 2025-02-17 02:14:21, analyzing 38240 / 95658
+time: 2025-02-17 02:15:47, analyzing 39196 / 95658
+time: 2025-02-17 02:17:14, analyzing 40152 / 95658
+time: 2025-02-17 02:18:37, analyzing 41108 / 95658
+time: 2025-02-17 02:20:02, analyzing 42064 / 95658
+time: 2025-02-17 02:21:26, analyzing 43020 / 95658
+time: 2025-02-17 02:22:50, analyzing 43976 / 95658
+time: 2025-02-17 02:24:12, analyzing 44932 / 95658
+time: 2025-02-17 02:25:33, analyzing 45888 / 95658
+time: 2025-02-17 02:26:58, analyzing 46844 / 95658
+time: 2025-02-17 02:28:16, analyzing 47800 / 95658
+time: 2025-02-17 02:29:31, analyzing 48756 / 95658
+time: 2025-02-17 02:30:47, analyzing 49712 / 95658
+time: 2025-02-17 02:32:03, analyzing 50668 / 95658
+time: 2025-02-17 02:33:28, analyzing 51624 / 95658
+time: 2025-02-17 02:34:53, analyzing 52580 / 95658
+time: 2025-02-17 02:36:18, analyzing 53536 / 95658
+time: 2025-02-17 02:37:43, analyzing 54492 / 95658
+time: 2025-02-17 02:39:10, analyzing 55448 / 95658
+time: 2025-02-17 02:40:33, analyzing 56404 / 95658
+time: 2025-02-17 02:41:55, analyzing 57360 / 95658
+time: 2025-02-17 02:43:22, analyzing 58316 / 95658
+time: 2025-02-17 02:44:46, analyzing 59272 / 95658
+time: 2025-02-17 02:46:11, analyzing 60228 / 95658
+time: 2025-02-17 02:47:38, analyzing 61184 / 95658
+time: 2025-02-17 02:49:03, analyzing 62140 / 95658
+time: 2025-02-17 02:50:18, analyzing 63096 / 95658
+time: 2025-02-17 02:51:32, analyzing 64052 / 95658
+time: 2025-02-17 02:52:53, analyzing 65008 / 95658
+time: 2025-02-17 02:54:10, analyzing 65964 / 95658
+time: 2025-02-17 02:55:27, analyzing 66920 / 95658
+time: 2025-02-17 02:56:44, analyzing 67876 / 95658
+time: 2025-02-17 02:58:02, analyzing 68832 / 95658
+time: 2025-02-17 02:59:22, analyzing 69788 / 95658
+time: 2025-02-17 03:00:39, analyzing 70744 / 95658
+time: 2025-02-17 03:02:02, analyzing 71700 / 95658
+time: 2025-02-17 03:03:27, analyzing 72656 / 95658
+time: 2025-02-17 03:04:55, analyzing 73612 / 95658
+time: 2025-02-17 03:06:21, analyzing 74568 / 95658
+time: 2025-02-17 03:07:45, analyzing 75524 / 95658
+time: 2025-02-17 03:09:10, analyzing 76480 / 95658
+time: 2025-02-17 03:10:34, analyzing 77436 / 95658
+time: 2025-02-17 03:11:59, analyzing 78392 / 95658
+time: 2025-02-17 03:13:24, analyzing 79348 / 95658
+time: 2025-02-17 03:14:49, analyzing 80304 / 95658
+time: 2025-02-17 03:16:13, analyzing 81260 / 95658
+time: 2025-02-17 03:17:29, analyzing 82216 / 95658
+time: 2025-02-17 03:18:44, analyzing 83172 / 95658
+time: 2025-02-17 03:20:05, analyzing 84128 / 95658
+time: 2025-02-17 03:21:29, analyzing 85084 / 95658
+time: 2025-02-17 03:22:43, analyzing 86040 / 95658
+time: 2025-02-17 03:23:57, analyzing 86996 / 95658
+time: 2025-02-17 03:25:18, analyzing 87952 / 95658
+time: 2025-02-17 03:26:39, analyzing 88908 / 95658
+time: 2025-02-17 03:28:02, analyzing 89864 / 95658
+time: 2025-02-17 03:29:20, analyzing 90820 / 95658
+time: 2025-02-17 03:30:35, analyzing 91776 / 95658
+time: 2025-02-17 03:31:50, analyzing 92732 / 95658
+time: 2025-02-17 03:33:12, analyzing 93688 / 95658
+time: 2025-02-17 03:34:35, analyzing 94644 / 95658
+time: 2025-02-17 03:36:01, analyzing 95600 / 95658
+2025-02-17 03:36:05.815975: I tensorflow/core/framework/local_rendezvous.cc:405] Local rendezvous is aborting with status: OUT_OF_RANGE: End of sequence
+dict_keys(['action', 'action_dict', 'discount', 'is_first', 'is_last', 'is_terminal', 'language_instruction', 'language_instruction_2', 'language_instruction_3', 'observation', 'reward'])
+tf.Tensor(b'', shape=(), dtype=string)
+tf.Tensor(b'', shape=(), dtype=string)
+tf.Tensor(b'', shape=(), dtype=string)
+dict_keys(['cartesian_position', 'exterior_image_1_left', 'exterior_image_2_left', 'gripper_position', 'joint_position', 'wrist_image_left'])
+(180, 320, 3)
+(180, 320, 3)
+(180, 320, 3)
+(6,)
+(1,)
+(7,)
+dict_keys(['cartesian_position', 'cartesian_velocity', 'gripper_position', 'gripper_velocity', 'joint_position', 'joint_velocity'])
+(6,)
+(6,)
+(1,)
+(1,)
+(7,)
+(7,)

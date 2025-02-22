@@ -1,0 +1,158 @@
+-------------------ep_bins-------------------
+marker: 6398
+cloth: 4781
+cup: 14745
+bottle: 5165
+block: 4791
+drawer: 4498
+lid: 6885
+mug: 5745
+object: 10392
+other: 28927
+no_lang: 20918
+['Home dining room', 'Bathroom', 'Unknown', 'Home kitchen', 'Industrial kitchen', 'Industrial dining room', 'Bedroom', 'Home office', 'Laundry', 'Industrial office', 'Hallway / closet / doorway', 'Living room']
+-------------------ep_bins_success-------------------
+marker: 6392
+cloth: 4779
+cup: 14739
+bottle: 5163
+block: 4787
+drawer: 4497
+lid: 6882
+mug: 5744
+object: 10383
+other: 28897
+no_lang: 4182
+-------------------ep_finer_bins_success-------------------
+marker Home dining room: 17
+marker Bathroom: 1
+marker Unknown: 142
+marker Home kitchen: 49
+marker Industrial kitchen: 324
+marker Industrial dining room: 34
+marker Bedroom: 1
+marker Home office: 1157
+marker Laundry: 0
+marker Industrial office: 4582
+marker Hallway / closet / doorway: 1
+marker Living room: 84
+cloth Home dining room: 97
+cloth Bathroom: 52
+cloth Unknown: 309
+cloth Home kitchen: 538
+cloth Industrial kitchen: 315
+cloth Industrial dining room: 46
+cloth Bedroom: 314
+cloth Home office: 375
+cloth Laundry: 40
+cloth Industrial office: 2507
+cloth Hallway / closet / doorway: 14
+cloth Living room: 172
+cup Home dining room: 91
+cup Bathroom: 129
+cup Unknown: 2108
+cup Home kitchen: 1761
+cup Industrial kitchen: 1676
+cup Industrial dining room: 117
+cup Bedroom: 11
+cup Home office: 1293
+cup Laundry: 29
+cup Industrial office: 7323
+cup Hallway / closet / doorway: 4
+cup Living room: 197
+bottle Home dining room: 168
+bottle Bathroom: 151
+bottle Unknown: 1216
+bottle Home kitchen: 1039
+bottle Industrial kitchen: 341
+bottle Industrial dining room: 0
+bottle Bedroom: 46
+bottle Home office: 215
+bottle Laundry: 30
+bottle Industrial office: 1823
+bottle Hallway / closet / doorway: 1
+bottle Living room: 133
+block Home dining room: 6
+block Bathroom: 0
+block Unknown: 1648
+block Home kitchen: 39
+block Industrial kitchen: 280
+block Industrial dining room: 5
+block Bedroom: 3
+block Home office: 98
+block Laundry: 0
+block Industrial office: 2681
+block Hallway / closet / doorway: 1
+block Living room: 26
+drawer Home dining room: 16
+drawer Bathroom: 27
+drawer Unknown: 854
+drawer Home kitchen: 625
+drawer Industrial kitchen: 399
+drawer Industrial dining room: 0
+drawer Bedroom: 179
+drawer Home office: 389
+drawer Laundry: 20
+drawer Industrial office: 1926
+drawer Hallway / closet / doorway: 52
+drawer Living room: 10
+lid Home dining room: 194
+lid Bathroom: 66
+lid Unknown: 1087
+lid Home kitchen: 1505
+lid Industrial kitchen: 1204
+lid Industrial dining room: 79
+lid Bedroom: 26
+lid Home office: 198
+lid Laundry: 30
+lid Industrial office: 2281
+lid Hallway / closet / doorway: 56
+lid Living room: 156
+mug Home dining room: 28
+mug Bathroom: 15
+mug Unknown: 311
+mug Home kitchen: 368
+mug Industrial kitchen: 442
+mug Industrial dining room: 26
+mug Bedroom: 2
+mug Home office: 878
+mug Laundry: 0
+mug Industrial office: 3544
+mug Hallway / closet / doorway: 0
+mug Living room: 130
+object Home dining room: 124
+object Bathroom: 58
+object Unknown: 1221
+object Home kitchen: 1051
+object Industrial kitchen: 1043
+object Industrial dining room: 37
+object Bedroom: 198
+object Home office: 705
+object Laundry: 22
+object Industrial office: 5686
+object Hallway / closet / doorway: 7
+object Living room: 231
+other Home dining room: 583
+other Bathroom: 419
+other Unknown: 6054
+other Home kitchen: 5003
+other Industrial kitchen: 4328
+other Industrial dining room: 117
+other Bedroom: 617
+other Home office: 2111
+other Laundry: 173
+other Industrial office: 7987
+other Hallway / closet / doorway: 535
+other Living room: 970
+no_lang Home dining room: 61
+no_lang Bathroom: 48
+no_lang Unknown: 1334
+no_lang Home kitchen: 560
+no_lang Industrial kitchen: 593
+no_lang Industrial dining room: 159
+no_lang Bedroom: 35
+no_lang Home office: 201
+no_lang Laundry: 12
+no_lang Industrial office: 1084
+no_lang Hallway / closet / doorway: 31
+no_lang Living room: 64

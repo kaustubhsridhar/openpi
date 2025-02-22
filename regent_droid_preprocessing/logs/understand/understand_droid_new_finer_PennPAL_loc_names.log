@@ -1,0 +1,75 @@
+-------------------ep_bins-------------------
+marker: 6398
+cloth: 4781
+cup: 14745
+bottle: 5165
+block: 4791
+drawer: 4498
+lid: 6885
+mug: 5745
+object: 10392
+other: 28927
+no_lang: 20918
+['Industrial office', 'Unknown', 'Industrial kitchen', 'Home kitchen', 'Industrial dining room', 'Home office']
+-------------------ep_bins_success-------------------
+marker: 6392
+cloth: 4779
+cup: 14739
+bottle: 5163
+block: 4787
+drawer: 4497
+lid: 6882
+mug: 5744
+object: 10383
+other: 28897
+no_lang: 4182
+-------------------ep_finer_bins_success-------------------
+marker Industrial office: 135
+marker Unknown: 6158
+marker Industrial kitchen: 90
+marker Home kitchen: 8
+marker Home office: 1
+cloth Industrial office: 210
+cloth Unknown: 4490
+cloth Industrial kitchen: 7
+cloth Home kitchen: 72
+cup Industrial office: 208
+cup Unknown: 14202
+cup Industrial kitchen: 211
+cup Home kitchen: 82
+cup Industrial dining room: 8
+cup Home office: 28
+bottle Industrial office: 8
+bottle Unknown: 5153
+bottle Industrial kitchen: 2
+block Industrial office: 2
+block Unknown: 4784
+block Home kitchen: 1
+drawer Industrial office: 186
+drawer Unknown: 4163
+drawer Industrial kitchen: 108
+drawer Home kitchen: 40
+lid Industrial office: 198
+lid Unknown: 6567
+lid Industrial kitchen: 74
+lid Home kitchen: 42
+lid Home office: 1
+mug Industrial office: 164
+mug Unknown: 5475
+mug Industrial kitchen: 19
+mug Home kitchen: 57
+mug Home office: 29
+object Industrial office: 181
+object Unknown: 10118
+object Industrial kitchen: 49
+object Home kitchen: 32
+object Industrial dining room: 2
+object Home office: 1
+other Industrial office: 771
+other Unknown: 27678
+other Industrial kitchen: 290
+other Home kitchen: 153
+other Industrial dining room: 5
+no_lang Industrial office: 3
+no_lang Unknown: 4177
+no_lang Home kitchen: 2
